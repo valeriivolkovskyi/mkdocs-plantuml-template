@@ -1,7 +1,6 @@
 # Documentation Site Setup
 
-This project uses **MkDocs** with the **Material theme** and the `plantuml_markdown` extension to generate documentation.  
-The output is a static site that can be served from **S3 + CloudFront** in production.  
+This template project uses **MkDocs** with the **Material theme** and the `plantuml_markdown` extension to generate documentation.  
 UML diagrams are rendered locally with the PlantUML JAR inside the container.
 
 ---
@@ -13,6 +12,7 @@ Run MkDocs with live reload and automatic rebuilds.
 ```bash
 # Build the dev image
 docker build -t docs-dev --target dev .
+# Output: `/site` folder
 ```
 ```bash
 # Run with your source mounted
