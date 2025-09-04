@@ -1,0 +1,11 @@
+.git
+.gitignore
+.venv
+__pycache__/
+*.pyc
+site/
+node_modules/
+.dist/
+.cache/
+.DS_Store
+.idea

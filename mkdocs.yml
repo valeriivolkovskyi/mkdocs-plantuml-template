@@ -1,0 +1,59 @@
+site_name: Your Docs
+site_description: Documentation powered by MkDocs Material
+#site_url: https://example.com
+#repo_url: https://github.com/your/repo
+#repo_name: your/repo
+#edit_uri: edit/main/docs/
+
+use_directory_urls: true
+strict: true
+
+theme:
+  name: material
+  language: en
+  palette:
+    scheme: default
+  features:
+    - navigation.instant
+    - navigation.indexes
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+  # - toc.follow
+  # logo: images/logo.svg
+  # favicon: images/favicon.png
+
+plugins:
+  - search
+
+
+nav:
+  - Home: index.md
+
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - attr_list
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - plantuml_markdown:
+      plantuml_cmd: "java -jar /opt/plantuml/plantuml.jar -pipe -tsvg"
+      format: svg
+      classes: pumlcdg
+
+extra_javascript:
+  - js/panzoom.js
+
+extra_css:
+  - css/controls.css
+
+# Optional dev server tweaks
+# dev_addr: 127.0.0.1:8000
+# watch:
+#   - docs
